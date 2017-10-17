@@ -14,6 +14,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'feed.html',
 })
 export class FeedPage {
+  public objeto_feed = {
+    titulo:"Exemplo de Feed",
+    data:"November 5, 1955",
+    descricao:"Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!Whoa. This is heavy.",
+    qtd_likes:"12 Likes",
+    qtd_comments:"4",
+    time_comments:"11h ago"
+
+  }
 
   public nome_usuario:string = "Exemplo de Feed"; //exemplo de criação de variávels
 
