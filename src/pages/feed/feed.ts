@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MovieProvider } from '../../providers/movie/movie';
 
 /**
  * Generated class for the FeedPage page.
@@ -12,6 +13,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-feed',
   templateUrl: 'feed.html',
+  providers:[
+    MovieProvider
+  ]
 })
 export class FeedPage {
   public objeto_feed = {
@@ -26,11 +30,15 @@ export class FeedPage {
 
   public nome_usuario:string = "Exemplo de Feed"; //exemplo de criação de variávels
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    private movieProvider: MovieProvider,
+    public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FeedPage');
+   // console.log('ionViewDidLoad FeedPage');
+   this.movieProvider.getLatesMovies()
   }
 
 }
