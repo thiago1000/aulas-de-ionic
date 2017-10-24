@@ -18,7 +18,7 @@ export class MovieProvider {
   }
 
   getLatesMovies(){
-    return this.http.get(this.baseApiPath + "/movie/latest?api_key=1de8edc527f095ee0909db33e2ac39ff");
+    return this.http.get(this.baseApiPath + "/movie/popular?api_key=1de8edc527f095ee0909db33e2ac39ff");
   }
 
 }
